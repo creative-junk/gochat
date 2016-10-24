@@ -36,7 +36,18 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/image_layout" >
 
-
+        <TextView
+            android:id="@+id/tvCustomInboxTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Time"
+            android:textColor="@color/Boddy" />
 
         <TextView
             android:id="@+id/tvCustomInboxName"
@@ -64,17 +75,34 @@
             android:textColor="@color/Boddy"
             emojicon:emojiconSize="18sp"
             android:layout_marginTop="2dp" />
-        <TextView
-            android:id="@+id/tvCustomInboxTime"
+
+        <!--
+             <TextView
+            android:id="@+id/Unread_messages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tvCustomInboxName"
-            android:layout_marginTop="2dp"
+            android:layout_alignLeft="@+id/tvCustomInboxTime"
+            android:layout_below="@+id/tvCustomInboxTime"
             android:gravity="center"
             android:singleLine="true"
-            android:text="Time"
-            android:textColor="@color/Boddy"
-            android:layout_below="@+id/tvCustomInboxMessage"/>
+            android:text="Small"
+            android:textColor="@android:color/black"
+            android:background="@android:color/darker_gray"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        -->
+
+        <!--<TextView-->
+            <!--android:id="@+id/No_of_messages"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_above="@+id/tvCustomInboxMessage"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@+id/tvCustomInboxName"-->
+            <!--android:gravity="center"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="()"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--android:textColor="@android:color/black" />-->
     </RelativeLayout>
 
 </RelativeLayout>
