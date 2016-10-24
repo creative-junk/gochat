@@ -52,7 +52,7 @@ public class InboxActivity extends Activity implements AccelerometerListener {
         ActionBar bar = getActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00796B")));
        // bar.setTitle(R.string.app_name);
-        bar.setTitle(Html.fromHtml("<font color='#ffffff'>Messaging</font>"));
+        bar.setTitle(Html.fromHtml("<font color='#ffffff'>GoText</font>"));
       //  bar.setIcon(R.drawable.icon_top);
 
         Utils.getOverflowMenu(this);
