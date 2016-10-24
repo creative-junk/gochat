@@ -50,7 +50,7 @@ public class InboxActivity extends Activity implements AccelerometerListener {
 
         lvMessageList = (ListView) findViewById(R.id.lvInbox);
         ActionBar bar = getActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0154A4")));
+       // bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0154A4")));
         bar.setTitle(R.string.app_name);
         bar.setTitle(Html.fromHtml("<font color='#ffffff'>Messaging</font>"));
         bar.setIcon(R.drawable.icon_top);
