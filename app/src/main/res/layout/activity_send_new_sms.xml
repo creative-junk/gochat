@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/background">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="10dp"
+    android:id="@+id/relativeLayout2">
+    <EditText
+        android:id="@+id/etNumberToSendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:ems="10"
+        android:hint="To:"
+        android:inputType="phone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/ivBrowseContactsQuick"
+        android:layout_toStartOf="@+id/ivBrowseContactsQuick"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/ivBrowseContactsQuick"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/contact"
+        android:layout_marginEnd="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/smsSendingBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/popup_window"
+        android:layout_alignParentLeft="true">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#e1e5e9"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/view" />
+
+        <ImageView
+            android:id="@+id/ivSendNewSMS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sendbutton"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/smile1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view"
+            android:background="@drawable/smile"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            android:onClick="Clicker"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentLeft="true" />
+
+        <com.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/etWriteSMSToSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/smile1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Type Message"
+            android:textColor="@android:color/black"
+            android:textStyle="italic"
+            emojicon:emojiconSize="28sp"
+            android:layout_toLeftOf="@+id/ivSendNewSMS" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/popup_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="1px">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/rl_emijicon1">
+
+
+    <fragment
+        android:id="@+id/emojicon"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+
+        class="com.rockerhieu.emojicon.EmojiconsFragment"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

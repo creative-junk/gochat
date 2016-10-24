@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings">
+
+    <com.crysoft.me.gotext.AppPreferences
+        android:key="first_category"
+        android:textColor="#FF0000"
+        android:title="First Category">
+        <RingtonePreference
+            android:key="tone"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="Select Ringtone"
+            android:title="Ring_Tone" />
+    </com.crysoft.me.gotext.AppPreferences>
+    <com.crysoft.me.gotext.AppPreferences
+        android:key="second_category"
+        android:title="Second Category">
+        <SwitchPreference
+            android:id="@+id/checbox"
+            android:defaultValue="false"
+            android:key="Chackbox"
+            android:summary="Enable/Disable Shake To Delete "
+            android:title="Shake_To_Delete"></SwitchPreference>
+    </com.crysoft.me.gotext.AppPreferences>
+    <com.crysoft.me.gotext.AppPreferences
+        android:key="pc3"
+        android:title="test_title3">
+        <ListPreference
+            android:dialogTitle="TimerForList"
+            android:entries="@array/list"
+            android:entryValues="@array/lValues"
+            android:key="timer"
+            android:summary="@array/lValues"
+            android:title="Timer" />
+    </com.crysoft.me.gotext.AppPreferences>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="vibrator"
+        android:summary="Enable/Disable Vibrator "
+        android:title="Vibrator"
+
+        ></CheckBoxPreference>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="Contact_Image_Viewer"
+        android:summary="Enable/Disable Contacts Image "
+        android:title="Contact_Image_Viewer"
+
+        ></CheckBoxPreference>
+</PreferenceScreen>

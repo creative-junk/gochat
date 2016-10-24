@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sender_layout"
+   
+     >
+
+    <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="center"
+        android:clickable="false"
+         android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="8dp"
+            android:textColor="@android:color/black"
+            android:text="TextView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+       <com.rockerhieu.emojicon.EmojiconTextView
+           android:id="@+id/tvsender"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/sender"
+           android:padding="10dp"
+           android:textColor="@android:color/black"
+           android:text="Text"
+           emojicon:emojiconSize="28sp"
+           android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+           android:textSize="15dp"
+           android:layout_alignParentTop="true"
+           android:layout_toLeftOf="@+id/textView1"
+           android:layout_marginLeft="25dp"
+           android:layout_marginRight="10dp" />
+     </RelativeLayout>
+</LinearLayout>

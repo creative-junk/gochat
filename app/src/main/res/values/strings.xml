@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GoText</string>
+    <string name="action_settings">Settings</string>
+     <string name="action_call">Call</string>
+    <string name="title_search">Search</string>
+    <string name="search_hint"> Search</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_inbox">Messaging</string>
+    <string name="title_activity_conversation">Conversation</string>
+    <string name="title_activity_send_new_sms">New Message</string>
+
+
+</resources>

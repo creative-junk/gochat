@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    tools:context="com.rockerhieu.emojicon.example.MainActivity$PlaceholderFragment">
+
+    <RelativeLayout
+        android:id="@+id/container_lv_sender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom">
+
+        <ListView
+            android:id="@+id/lv_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:padding="10dp"
+            android:divider="@color/actionbar_text"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentTop="true">
+
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/actionbar_text"
+        android:layout_above="@+id/popup_window"
+        android:layout_alignParentLeft="true">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#e1e5e9"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/view" />
+
+        <ImageView
+            android:id="@+id/ivSendNewSMS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sendbutton"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/smile1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/view"
+            android:background="@drawable/smile"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentLeft="true" />
+
+        <com.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/etmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/smile1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Type Message"
+            android:textColor="@android:color/black"
+            android:textStyle="italic"
+            emojicon:emojiconSize="28sp"
+            android:layout_toLeftOf="@+id/ivSendNewSMS" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/popup_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="1px">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/rl_emojicon">
+
+            <fragment
+                android:id="@+id/emojicon"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                class="com.rockerhieu.emojicon.EmojiconsFragment" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

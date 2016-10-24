@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#D4D4D4">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:padding="10dp"
+            android:id="@+id/relativeLayout2">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/ivsenderquickimg"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/tvnameofsender"
+                android:layout_alignTop="@+id/ivsenderquickimg"
+                android:layout_toRightOf="@+id/ivsenderquickimg"
+                android:layout_toEndOf="@+id/ivsenderquickimg"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/actionbar_text"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvnumberofsender"
+                android:textColor="@color/actionbar_text"
+                android:layout_below="@+id/tvnameofsender"
+                android:layout_alignLeft="@+id/tvnameofsender"
+                android:layout_alignStart="@+id/tvnameofsender" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="10dp"
+            android:background="#fff"
+            />
+        </RelativeLayout>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:padding="10dp"
+            android:background="@color/blue"
+            android:layout_gravity="center_horizontal" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:background="@drawable/date"
+                android:padding="5dp"
+                android:textColor="@color/actionbar_text"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tvsenderdate"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvsenderdate"
+                android:textColor="@color/actionbar_text"
+                android:id="@+id/tvsendermsg"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etquickMessage"
+            android:hint="Message"
+            android:background="@color/actionbar_text"
+            android:padding="15dp" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Cancel"
+                android:background="#B4B4B4"
+                android:textColor="@color/actionbar_text"
+                android:id="@+id/btnquickdialogcancel"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Reply"
+                android:background="@color/blue"
+                android:textColor="@color/actionbar_text"
+                android:id="@+id/btnquickdialogsend"
+                android:layout_alignBottom="@+id/btnquickdialogcancel"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#D4D4D4">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp"
+            android:id="@+id/relativeLayout2">
+            <EditText
+                android:id="@+id/etNumberToSendQuickSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:ems="10"
+                android:hint="To:"
+                android:inputType="phone"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/ivBrowseContactsQuick"
+                android:layout_toStartOf="@+id/ivBrowseContactsQuick"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/ivBrowseContactsQuick"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/contact"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etquickMessage"
+            android:hint="Message"
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:padding="15dp" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/btnquickdialogcancel"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:id="@+id/btnquickdialogsend"
+                android:layout_alignBottom="@+id/btnquickdialogcancel"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

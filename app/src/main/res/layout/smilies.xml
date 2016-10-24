@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smilies"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"   
+    tools:context="com.rockerhieu.emojicon.example.MainActivity$PlaceholderFragment" 
+    android:layout_gravity="bottom"  
+    >
+    <fragment
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"  
+        class="com.rockerhieu.emojicon.EmojiconsFragment" />
+
+</RelativeLayout>
+ <!--            android:text="@string/i_love_emojicon"--> 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgduration"
+            >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="One Week"
+                android:id="@+id/rloneweek"
+                android:checked="false"
+                android:textColor="#000"
+                android:textStyle="normal|bold|italic"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Two Week"
+                android:id="@+id/rltwoweek"
+                android:checked="false"
+                android:textColor="#000"
+                android:textStyle="normal|bold|italic"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Three Week"
+                android:id="@+id/rlthreeweek"
+                android:checked="false"
+                android:textColor="#000"
+                android:textStyle="bold|italic"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="One Month"
+                android:id="@+id/rlonemonth"
+                android:checked="false"
+                android:textColor="#000"
+                android:textStyle="bold|italic"
+                android:textSize="20dp" />
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

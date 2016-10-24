@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:background="#ace2ed"
+    android:layout_marginRight="50dp"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvCustomInboxTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Time" />
+
+      
+
+        <TextView
+            android:id="@+id/tvCustomInboxMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:text="text" />
+
+</RelativeLayout>

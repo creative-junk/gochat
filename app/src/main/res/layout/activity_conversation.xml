@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/conversation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom"
+        android:gravity="bottom" >
+
+        <ImageView
+            android:id="@+id/ivSendNewSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sendbutton"/>
+
+        <ImageView
+            android:id="@+id/smile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/smile"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+           />
+
+        <com.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/etmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/smile1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Type Message"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            emojicon:emojiconSize="28sp" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/container_lv_sender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        
+        >
+        <ListView android:id="@+id/lv_sender" 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"></ListView>
+	</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="list">
+        <item>One Week
+        </item>
+      <item>Two Week
+        </item>
+        <item>Three Week
+        </item>
+        <item>One Month
+        </item>  
+        
+    </string-array>
+    
+    <string-array name="lValues">
+         <item>One Week Selected
+        </item>
+      <item>Two Week Selected
+        </item>
+        <item>Three Week Selected
+        </item>
+        <item>One Month Selected
+        </item> 
+        
+    </string-array>
+</resources>

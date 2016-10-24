@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.crysoft.me.gotext">
+
+    <uses-sdk android:minSdkVersion="7"
+        android:targetSdkVersion="11" />
+
+
+
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        tools:replace="icon, label"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+
+        <!--This meta-data tag is required to use Google Play Services.-->
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.crysoft.me.gotext.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.crysoft.me.gotext.NotificationReceiver"
+            android:theme="@android:style/Theme.Dialog"
+            ></activity>
+        <activity android:name="com.crysoft.me.gotext.QuickMessage"
+            android:theme="@android:style/Theme.Dialog"
+            ></activity>
+        <activity
+            android:name="com.crysoft.me.gotext.InboxActivity"
+            android:label="@string/title_activity_inbox"
+            android:screenOrientation="portrait"
+             >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+        </activity>
+        <!-- Search results activity -->
+        <activity
+            android:name="com.crysoft.me.gotext.SearchResultsActivity"
+            android:parentActivityName="com.crysoft.me.gotext.InboxActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.crysoft.me.gotext.SettingsActivity"
+            android:label="Preferences"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.crysoft.me.gotext.Prefs"
+            android:label="Preferences" >
+            <intent-filter>
+                <action android:name="android.intent.action.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.crysoft.me.gotext.AboutUs"
+            android:label="AboutUs"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.crysoft.me.gotext.SmsReceiverConversation" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.crysoft.me.gotext.ConversationActivity"
+            android:label="@string/title_activity_conversation"
+            android:parentActivityName="com.crysoft.me.gotext.ConversationActivity"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        <activity
+            android:name="com.crysoft.me.gotext.SendNewSMSActivity"
+            android:label="@string/title_activity_send_new_sms"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.crysoft.me.gotext.InboxActivity" >
+        </activity>
+
+
+    </application>
+
+</manifest>

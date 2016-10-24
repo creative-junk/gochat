@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/background">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_above="@+id/adView"
+    android:id="@+id/scrollView2">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="PreferenceClicker"
+            android:layout_margin="10dp"
+            android:background="@drawable/sendercontainer"
+            android:id="@+id/rlAvatar">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avatar"
+                android:id="@+id/tvavatar"
+                android:clickable="false"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/Name"
+                android:textSize="20dp"
+                android:textIsSelectable="true"
+                android:textStyle="bold|italic"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbAvatar"
+                android:layout_marginRight="26dp"
+                android:layout_marginEnd="26dp"
+                android:checked="false"
+                android:onClick="CheckBoxClicker"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="PreferenceClicker"
+            android:visibility="visible"
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:id="@+id/rlquickmessage" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Reply"
+                android:id="@+id/tvquicknewmessage"
+                android:clickable="false"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/Name"
+                android:textSize="20dp"
+                android:textIsSelectable="true"
+                android:textStyle="bold|italic"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbQuickMessage"
+                android:layout_marginRight="26dp"
+                android:layout_marginEnd="26dp"
+                android:checked="false"
+                android:onClick="CheckBoxClicker"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="PreferenceClicker"
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:id="@+id/rlVibration">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vibration"
+                android:id="@+id/tvvibration"
+                android:clickable="false"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/Name"
+                android:textSize="20dp"
+                android:textIsSelectable="true"
+                android:textStyle="bold|italic"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbVibration"
+                android:layout_marginRight="26dp"
+                android:onClick="CheckBoxClicker"
+                android:layout_marginEnd="26dp"
+                android:checked="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:onClick="PreferenceClicker"
+            android:id="@+id/rlshaketodelete">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete On Shake"
+                android:id="@+id/textView"
+                android:clickable="false"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/Name"
+                android:textSize="20dp"
+                android:textIsSelectable="true"
+                android:textStyle="bold|italic"
+                android:layout_above="@+id/textView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbDeletor"
+                android:onClick="CheckBoxClicker"
+                android:checked="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable/Disable Delete On Shake"
+                android:id="@+id/textView2"
+                android:clickable="false"
+                android:textColor="@color/Boddy"
+                android:textIsSelectable="true"
+                android:textStyle="italic"
+                android:layout_below="@+id/cbDeletor"
+                android:layout_alignLeft="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:layout_marginTop="10dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="#E1E1E1"
+                android:id="@+id/view12"
+                android:layout_below="@+id/textView2"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/view12"
+                android:onClick="PreferenceClicker"
+                android:id="@+id/rlDeleteDuration">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Delete Duration"
+                    android:id="@+id/tvselectdeleteduration"
+                    android:textColor="@color/Name"
+                    android:textSize="20dp"
+                    android:textIsSelectable="true"
+                    android:clickable="false"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="PreferenceClicker"
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:padding="4dp"
+            android:id="@+id/relativeLayout" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Special People"
+                android:id="@+id/textView3"
+                android:textColor="@color/Name"
+                android:textStyle="bold|italic"
+                android:textSize="20dp"
+                android:layout_marginLeft="24dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:id="@+id/btnpreferenceadd"
+                android:textColor="@color/actionbar_text"
+                android:onClick="CheckBoxClicker"
+                android:background="@drawable/addbutton"
+                android:layout_alignTop="@+id/etspecialpeople"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/etspecialpeople" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Special Name"
+                android:id="@+id/etspecialpeople"
+                android:textColor="#000"
+                android:background="@drawable/addspeciappeople"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:layout_below="@+id/textView3"
+                android:layout_toLeftOf="@+id/btnpreferenceadd"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="PreferenceClicker"
+            android:id="@+id/rlaboutus"
+
+            android:background="@drawable/sendercontainer"
+            android:layout_margin="10dp"
+            android:layout_alignBottom="@+id/scrollView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:id="@+id/textView4"
+                android:clickable="false"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/Name"
+                android:textSize="20dp"
+                android:textIsSelectable="true"
+                android:textStyle="bold|italic"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+</RelativeLayout>
