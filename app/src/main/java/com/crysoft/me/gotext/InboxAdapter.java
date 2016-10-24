@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
@@ -153,6 +154,8 @@ public class InboxAdapter extends BaseAdapter {
             tvName.setTypeface(null, Typeface.BOLD);
             tvTime.setTypeface(null, Typeface.BOLD);
             tvMessage.setTypeface(null, Typeface.BOLD);
+
+            tvMessage.setTextColor(Color.BLACK);
         }
         return v;
     }

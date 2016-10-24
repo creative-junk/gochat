@@ -12,11 +12,10 @@
             android:id="@+id/lvInbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:divider="@color/background"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_above="@+id/footer"
-            android:layout_below="@+id/adView" />
+            android:layout_above="@+id/footer" />
 
 
 

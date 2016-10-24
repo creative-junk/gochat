@@ -464,9 +464,9 @@ public class ConversationActivity extends FragmentActivity implements
                 tvSender = (TextView) view.findViewById(R.id.tvsender);
                 //Which Message are we selecting, from the Receiver or from the Sender
                 if (tvSender != null) {
-                    strCopyText = tvReceiver.getText().toString();
-                } else {
                     strCopyText = tvSender.getText().toString();
+                } else {
+                    strCopyText = tvReceiver.getText().toString();
                 }
                 mSelectedRow = position; //set the selected row
                 mQuickAction.show(view);
